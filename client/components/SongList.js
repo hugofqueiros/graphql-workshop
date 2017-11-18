@@ -24,6 +24,10 @@ class SongList extends Component {
     }
 
     render() {
+        if (!this.props.data) {
+            return (<div>No GrapQL...</div>)
+        }
+
         if (this.props.data.loading) {
             return (<div>Loading...</div>);
         }
